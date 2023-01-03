@@ -19,10 +19,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     guard let windowSecne = (scene as? UIWindowScene) else { return }
     window = UIWindow(windowScene: windowSecne)
     
-    let firstVC = SearchViewController()
-    firstVC.view.backgroundColor = .cyan
+    let searchVC = SearchViewController()
+    let navigationController = UINavigationController(rootViewController: searchVC)
     
-    window?.rootViewController = firstVC
+    window?.rootViewController = navigationController
     window?.makeKeyAndVisible()
   }
   
